@@ -1,0 +1,7 @@
+.Thumb {
+  display: flex;
+  justify-content: center;
+}
+.List {
+  list-style: none;
+}
