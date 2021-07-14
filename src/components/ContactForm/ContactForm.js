@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import contactsOperations from '../../redux/contacts/contacts-operations';
+import { contactsOperations } from '../../redux/contacts';
+import { getContacts } from '../../redux/contacts/contacts-selectors';
 import { ReactComponent as IconAdd } from '../../Icon/add.svg';
 import styles from './ContactForm.module.css';
 
@@ -79,7 +80,7 @@ class ContactForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  contacts: state.contacts.items,
+  contacts: getContacts(state),
 });
 
 const mapDispatchToProps = dispatch => ({
